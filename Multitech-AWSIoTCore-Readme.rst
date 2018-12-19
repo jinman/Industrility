@@ -12,24 +12,25 @@ Set up the gateway
 1.	Open the box
 2.	Connect the power supply, antennas etc.
 
-----------------------
-Connect to the gateway
-----------------------
+-----------------------------------
+Connect the gateway to the Internet
+-----------------------------------
 1. Unscrew the front panel of the gateway
-2. User the MicroUSB cable to connect the debug port to your laptop
+2. Use the MicroUSB cable to connect the debug port to your laptop
 3. Use the following command::
 
     $ screen /dev/tty.usbmodem14101 115200
-    
     	Login: mtadm
 	Password: root
-    
+
 4. Connect the ethernet cable from your gateway to your router 
 5. Configure the network connections so the gateway can connect to Internet, use the following command::
 
     $ sudo nano /etc/network/interfaces
+    (Use vi if you live your life to the fullest ;-))
 
-    Change the file to
+6. Enable dhcp by changing the file to::
+
     # The loopback interface
     auto lo iface lo inet loopback
 
@@ -40,14 +41,15 @@ Connect to the gateway
     netmask 255.255.255.0 
     gateway 192.168.1.1
     
-6. Reboot::
+7. Reboot::
 
     $ sudo shutdown -r now
- 
-------------------
-Set up the gateway
-------------------
 
+8. On reboot, ping to see if you have Internet connection from the gateway.
+
+---------------------
+Configure the gateway
+---------------------
 
 1. Check for python (2.7+) and openssl (1.0.1+) version::
 
