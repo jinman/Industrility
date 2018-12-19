@@ -80,19 +80,22 @@ Configure AWS IoT Core using AWS Console
 
     $ scp /path/to/local/file mtadm@192.168.2.100:/path/to/remote/file
  
-8. Get the Custom endpoint
-    a.	AWS IoT Console > Settings (bottom left)
-    b.	something like azrsdf173t-ats.iot.us-west-2.amazonaws.com
+8. Get the Custom endpoint from AWS IoT Console > Settings (bottom left) (something like azrsdf173t-ats.iot.us-west-2.amazonaws.com)
 
 -----------------------
 Connect to AWS IoT Core
 -----------------------
 
-1.	Download the root certificate in the same folder
+1. Download the root certificate in the same folder::
+
     $ curl https://www.amazontrust.com/repository/AmazonRootCA1.pem > root-CA.crt
-2.	Get one of the AWS IoT Python SDK Sample
+    
+2. Get one of the AWS IoT Python SDK Sample::
+
     $ wget https://raw.githubusercontent.com/aws/aws-iot-device-sdk-python/master/samples/basicPubSub/basicPubSub.py
-3.	Run the command
+    
+3. Run the command in the same folder where you `scp` the files::
+
     $ python basicPubSub.py -e azrsdf173t-ats.iot.us-west-2.amazonaws.com -r root-CA.crt -c mthing.cert.pem -k mthing.private.key
  
     2018-12-13 00:16:14,986 - AWSIoTPythonSDK.core.protocol.internal.clients - DEBUG - Invoking custom event callback...
@@ -115,31 +118,37 @@ Congratulations, you successfully run the official AWS IoT Python SDK sample on 
 Configure the cellular connection
 ---------------------------------
 
-1.	Disconnect Ethernet as Ethernet typically gets priority over PPP
-2.	Insert the SIM card (just above the debug port on front panel)
+1. Disconnect Ethernet as Ethernet typically gets priority over PPP
+2. Insert the SIM card (just above the debug port on front panel)
 
 ^^^^^^^^^^^^^^^^
 Configure Twilio
 ^^^^^^^^^^^^^^^^
-1.	Create a Twilio account if you don’t have one
-2.	Use the following command
-a.	mlinux-set-apn “wireless.twilio.com”
-b.	pppd call gsm
+1. Create a Twilio account if you don’t have one
+2. Use the following command::
+
+	$ mlinux-set-apn “wireless.twilio.com”
+	$ pppd call gsm
 
 ^^^^^^^^^^^^^^^^^
 Configure Soracom
 ^^^^^^^^^^^^^^^^^
 1.	Create a Soracom account if you don’t have one
-2.	Use the following command
-    $ mlinux-set-apn “soracom.io”
+2.	Use the following command::
+
+	$ mlinux-set-apn “soracom.io”
   	$ pppd call gsm
-3.	Verify ppp0 is up
-  	$ route
-	  $ Ifconfig ppp0
+	
+3.	Verify ppp0 is up::
+  	
+	$ route
+	$ Ifconfig ppp0
 
 -----------------------
 Connect to AWS IoT Core
 -----------------------
+Run the same command::
+
     $ python basicPubSub.py -e azrsdf173t-ats.iot.us-west-2.amazonaws.com -r root-CA.crt -c mthing.cert.pem -k mthing.private.key
  
 
