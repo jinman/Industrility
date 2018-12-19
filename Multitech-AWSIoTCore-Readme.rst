@@ -123,25 +123,20 @@ Configure the cellular connection
 1. Disconnect Ethernet as Ethernet typically gets priority over PPP
 2. Insert the SIM card (just above the debug port on front panel)
 
-^^^^^^^^^^^^^^^^
-Configure Twilio
-^^^^^^^^^^^^^^^^
-1. Create a Twilio account if you don’t have one
-2. Use the following command::
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Configure Carrier (Twilio or Soracom)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Create a Twilio or Soracom account if you don’t have one
+2. Use the following command to configure APN::
 
-	$ mlinux-set-apn “wireless.twilio.com”
-	$ pppd call gsm
-
-^^^^^^^^^^^^^^^^^
-Configure Soracom
-^^^^^^^^^^^^^^^^^
-1.	Create a Soracom account if you don’t have one
-2.	Use the following command::
-
-	$ mlinux-set-apn “soracom.io”
-  	$ pppd call gsm
+	$ mlinux-set-apn “wireless.twilio.com” (For Twilio
+	$ mlinux-set-apn “soracom.io” (For Soracom)
 	
-3.	Verify ppp0 is up::
+3. Start the PPP connection::
+
+	$ pppd call gsm
+	
+4. Verify ppp0 is up::
   	
 	$ route
 	$ Ifconfig ppp0
