@@ -149,6 +149,10 @@ Run the same command::
     $ python basicPubSub.py -e azrsdf173t-ats.iot.us-west-2.amazonaws.com -r root-CA.crt -c mthing.cert.pem -k mthing.private.key
  
 
+Congratulations, you have now successfully published messages using the official AWS IoT Python SDK sample using a cellular connection.
+
+Let the fun begin!
+
 ---------- 
 References
 ----------
@@ -156,6 +160,4 @@ References
 1.	http://www.multitech.net/developer/software/mlinux/using-mlinux/mlinux-cellular-connection/
 2.	http://www.multitech.net/developer/software/mlinux/getting-started-with-conduit-mlinux/ 
   
-Congratulations, you have now successfully published messages using the official AWS IoT Python SDK sample using a cellular connection.
 
-Let the fun begin!
