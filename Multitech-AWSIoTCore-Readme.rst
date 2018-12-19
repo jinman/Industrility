@@ -129,8 +129,8 @@ Configure a carrier (Twilio or Soracom)
 1. Create a Twilio or Soracom account if you don’t have one
 2. Use the following command to configure APN::
 
-	$ mlinux-set-apn “wireless.twilio.com” (For Twilio
-	$ mlinux-set-apn “soracom.io” (For Soracom)
+	$ mlinux-set-apn “wireless.twilio.com” (For Twilio Programmable Wireless)
+	$ mlinux-set-apn “soracom.io” (For Soracom Air)
 	
 3. Start the PPP connection::
 
