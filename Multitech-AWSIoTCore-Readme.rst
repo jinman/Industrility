@@ -20,8 +20,9 @@ Connect to the gateway
 3.	Use the following command
 
     $ screen /dev/tty.usbmodem14101 115200
-    Login: mtadm
-	  Password: root
+    
+    	Login: mtadm
+	Password: root
     
 4.	Connect the ethernet cable from your gateway to your router 
 5.	Configure the network connections so the gateway can connect to Internet, use the following command
@@ -33,29 +34,37 @@ Connect to the gateway
     auto lo iface lo inet loopback
 
     # Wired interface
-    auto eth0 
+    auto eth0
     iface eth0 inet dhcp
     address 192.168.2.100 
     netmask 255.255.255.0 
     gateway 192.168.1.1
-    iii.	sudo shutdown -r now
+    
+6. Reboot
+
+    $ sudo shutdown -r now
  
 ------------------
 Set up the gateway
 ------------------
 
 
-1.	Check for python (2.7+) and openssl (1.0.1+) version
+1. Check for python (2.7+) and openssl (1.0.1+) version
+
     $ python --version
     $ python
 	  >>>> import ssl
 	  >>>> ssl.OPENSSL_VERSION
-2.	Update packages
-    $ sudo opkg update
+	  
+2. Update packages and install pip
+
+	$ sudo opkg update
   	$ sudo opkg install python-pip
-    $ sudo pip install --upgrade pip
-3.	Install AWS IoT Phyton SDK
-    $ sudo pip install AWSIoTPythonSDK
+    	$ sudo pip install --upgrade pip
+	
+3. Install AWS IoT Phyton SDK
+    	
+	$ sudo pip install AWSIoTPythonSDK
 
 ----------------------------------------
 Configure AWS IoT Core using AWS Console
