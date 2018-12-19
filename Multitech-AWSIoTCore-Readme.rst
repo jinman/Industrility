@@ -15,17 +15,17 @@ Set up the gateway
 ----------------------
 Connect to the gateway
 ----------------------
-1.	Unscrew the front panel of the gateway
-2.	User the MicroUSB cable to connect the debug port to your laptop
-3.	Use the following command
+1. Unscrew the front panel of the gateway
+2. User the MicroUSB cable to connect the debug port to your laptop
+3. Use the following command::
 
     $ screen /dev/tty.usbmodem14101 115200
     
     	Login: mtadm
 	Password: root
     
-4.	Connect the ethernet cable from your gateway to your router 
-5.	Configure the network connections so the gateway can connect to Internet, use the following command
+4. Connect the ethernet cable from your gateway to your router 
+5. Configure the network connections so the gateway can connect to Internet, use the following command::
 
     $ sudo nano /etc/network/interfaces
 
@@ -40,7 +40,7 @@ Connect to the gateway
     netmask 255.255.255.0 
     gateway 192.168.1.1
     
-6. Reboot
+6. Reboot::
 
     $ sudo shutdown -r now
  
@@ -49,20 +49,20 @@ Set up the gateway
 ------------------
 
 
-1. Check for python (2.7+) and openssl (1.0.1+) version
+1. Check for python (2.7+) and openssl (1.0.1+) version::
 
     $ python --version
     $ python
 	  >>>> import ssl
 	  >>>> ssl.OPENSSL_VERSION
 	  
-2. Update packages and install pip
+2. Update packages and install pip::
 
 	$ sudo opkg update
   	$ sudo opkg install python-pip
     	$ sudo pip install --upgrade pip
 	
-3. Install AWS IoT Phyton SDK
+3. Install AWS IoT Phyton SDK::
     	
 	$ sudo pip install AWSIoTPythonSDK
 
@@ -70,17 +70,18 @@ Set up the gateway
 Configure AWS IoT Core using AWS Console
 ----------------------------------------
  
-1.	Create an AWS account, if you don’t have one
-2.	Login to AWS Console and "IoT Core"
-3.	Onboard> Register a Thing > Linux/OSX and Python
-4.	Create a Thing and provide a name
-    a.	mThing
-5.	Download Linux connection kit to your laptop
-6.	Unzip the files
-7.	Transfer the files to mLinux gateway
+1. Create an AWS account, if you don’t have one
+2. Login to AWS Console and "IoT Core"
+3. Onboard> Register a Thing > Linux/OSX and Python
+4. Create a Thing and provide a name: mThing
+5. Download Linux connection kit to your laptop
+6. Unzip the files
+7. Transfer the files to mLinux gateway::
+
     $ scp /path/to/local/file mtadm@192.168.2.100:/path/to/remote/file
-8.	Get the Custom endpoint
-    a.	AWS IoT Console> Settings (bottom left)
+ 
+8. Get the Custom endpoint
+    a.	AWS IoT Console > Settings (bottom left)
     b.	something like azrsdf173t-ats.iot.us-west-2.amazonaws.com
 
 -----------------------
