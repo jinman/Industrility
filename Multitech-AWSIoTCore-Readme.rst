@@ -120,12 +120,12 @@ Congratulations, you successfully run the official AWS IoT Python SDK sample on 
 Configure the cellular connection
 ---------------------------------
 
-1. Disconnect Ethernet as Ethernet typically gets priority over PPP
+1. Unplug Ethernet cable as Ethernet typically gets priority over PPP
 2. Insert the SIM card (just above the debug port on front panel)
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Configure Carrier (Twilio or Soracom)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Configure a carrier (Twilio or Soracom)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Create a Twilio or Soracom account if you don’t have one
 2. Use the following command to configure APN::
 
