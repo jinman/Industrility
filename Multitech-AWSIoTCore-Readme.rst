@@ -1,9 +1,9 @@
 ==============================================================================================
-Getting started with Multi-tech Conduit mLinux Programmable Gateway to connect to AWS IoT Core
+Getting started with MultiTech Conduit mLinux Programmable Gateway to connect to AWS IoT Core
 ==============================================================================================
-MultiConnect® ConduitTM is the industry’s most configurable, manageable gateway for industrial IoT applications. It provides a range of network connectivity choices to your preferred data management platform including carrier approved 4G-LTE, 3G, 2G and Ethernet. 
+MultiTech's MultiConnect® ConduitTM is the industry’s most configurable, manageable gateway for industrial IoT applications. It provides a range of network connectivity choices to your preferred data management platform including carrier-approved 4G-LTE, 3G, 2G and Ethernet. 
 
-Following are the steps to connect your Multi-tech Conduit mLinux gateway (MTCDT-LAT1-247L-US) to AWS IoT Core using the AWS IoT Python SDK. 
+Following are the steps to connect your MultiTech Conduit mLinux gateway (MTCDT-LAT1-247L-US) to AWS IoT Core using the AWS IoT Python SDK. 
 
  
 ------------------
