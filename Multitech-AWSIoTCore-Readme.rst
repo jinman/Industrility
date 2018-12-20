@@ -114,6 +114,14 @@ Connect to AWS IoT Core
     from topic: 
     sdk/test/Python
 
+------------------------------
+Test using AWS IoT MQTT Client
+------------------------------
+
+1. Go to "Test" in AWS IoT Core Console
+2. Under MQTT Client and subscribe to "sdk/test/Python" (note: its case sensitive)
+3. Check out whether your messages are getting published or not. You should see "Hello World" messages. 
+
 Congratulations, you successfully run the official AWS IoT Python SDK sample on mLinux platform using an Ethernet connection
 
 ---------------------------------
